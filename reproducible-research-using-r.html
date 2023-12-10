@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Reproducible Research using R | Project Introduction</title>
+  <meta name="description" content="2 Reproducible Research using R | Project Introduction" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Reproducible Research using R | Project Introduction" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Reproducible Research using R | Project Introduction" />
+  
+  
+  
+
+<meta name="author" content="Ricardo E.E. van der Raaf" />
+
+
+<meta name="date" content="2023-12-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="data-management.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> This website contains my personal Data Sciences portfolio. On the first page you’ll find my CV. Test.</a></li>
+<li class="chapter" data-level="2" data-path="reproducible-research-using-r.html"><a href="reproducible-research-using-r.html"><i class="fa fa-check"></i><b>2</b> Reproducible Research using R</a></li>
+<li class="chapter" data-level="3" data-path="data-management.html"><a href="data-management.html"><i class="fa fa-check"></i><b>3</b> Data Management</a></li>
+<li class="chapter" data-level="4" data-path="minion-data-quality-control-project.html"><a href="minion-data-quality-control-project.html"><i class="fa fa-check"></i><b>4</b> Minion data quality control project</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Project Introduction</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="reproducible-research-using-r" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Reproducible Research using R<a href="reproducible-research-using-r.html#reproducible-research-using-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<pre><code>## Installing package into &#39;C:/Users/Gebruiker/AppData/Local/R/win-library/4.3&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre><code>## Warning in install.packages :
+##   package &#39;ggplot&#39; is not available for this version of R
+## 
+## A version of this package for your version of R might be available elsewhere,
+## see the ideas at
+## https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages</code></pre>
+<pre><code>## tibble [360 × 34] (S3: tbl_df/tbl/data.frame)
+##  $ plateRow           : logi [1:360] NA NA NA NA NA NA ...
+##  $ plateColumn        : logi [1:360] NA NA NA NA NA NA ...
+##  $ vialNr             : num [1:360] 1 1 1 1 1 2 2 2 2 2 ...
+##  $ dropCode           : chr [1:360] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; ...
+##  $ expType            : chr [1:360] &quot;experiment&quot; &quot;experiment&quot; &quot;experiment&quot; &quot;experiment&quot; ...
+##  $ expReplicate       : num [1:360] 3 3 3 3 3 3 3 3 3 3 ...
+##  $ expName            : chr [1:360] &quot;CE.LIQ.FLOW.062&quot; &quot;CE.LIQ.FLOW.062&quot; &quot;CE.LIQ.FLOW.062&quot; &quot;CE.LIQ.FLOW.062&quot; ...
+##  $ expDate            : POSIXct[1:360], format: &quot;2020-11-30&quot; &quot;2020-11-30&quot; &quot;2020-11-30&quot; &quot;2020-11-30&quot; ...
+##  $ expResearcher      : chr [1:360] &quot;Sergio Reijnders - Ellis Herder&quot; &quot;Sergio Reijnders - Ellis Herder&quot; &quot;Sergio Reijnders - Ellis Herder&quot; &quot;Sergio Reijnders - Ellis Herder&quot; ...
+##  $ expTime            : num [1:360] 68 68 68 68 68 68 68 68 68 68 ...
+##  $ expUnit            : chr [1:360] &quot;hour&quot; &quot;hour&quot; &quot;hour&quot; &quot;hour&quot; ...
+##  $ expVolumeCounted   : num [1:360] 50 50 50 50 50 50 50 50 50 50 ...
+##  $ RawData            : num [1:360] 44 37 45 47 41 35 41 36 40 38 ...
+##  $ compCASRN          : chr [1:360] &quot;24157-81-1&quot; &quot;24157-81-1&quot; &quot;24157-81-1&quot; &quot;24157-81-1&quot; ...
+##  $ compName           : chr [1:360] &quot;2,6-diisopropylnaphthalene&quot; &quot;2,6-diisopropylnaphthalene&quot; &quot;2,6-diisopropylnaphthalene&quot; &quot;2,6-diisopropylnaphthalene&quot; ...
+##  $ compConcentration  : chr [1:360] &quot;4.99&quot; &quot;4.99&quot; &quot;4.99&quot; &quot;4.99&quot; ...
+##  $ compUnit           : chr [1:360] &quot;nM&quot; &quot;nM&quot; &quot;nM&quot; &quot;nM&quot; ...
+##  $ compDelivery       : chr [1:360] &quot;Liquid&quot; &quot;Liquid&quot; &quot;Liquid&quot; &quot;Liquid&quot; ...
+##  $ compVehicle        : chr [1:360] &quot;controlVehicleA&quot; &quot;controlVehicleA&quot; &quot;controlVehicleA&quot; &quot;controlVehicleA&quot; ...
+##  $ elegansStrain      : chr [1:360] &quot;N2&quot; &quot;N2&quot; &quot;N2&quot; &quot;N2&quot; ...
+##  $ elegansInput       : num [1:360] 25 25 25 25 25 25 25 25 25 25 ...
+##  $ bacterialStrain    : chr [1:360] &quot;OP50&quot; &quot;OP50&quot; &quot;OP50&quot; &quot;OP50&quot; ...
+##  $ bacterialTreatment : chr [1:360] &quot;heated&quot; &quot;heated&quot; &quot;heated&quot; &quot;heated&quot; ...
+##  $ bacterialOD600     : num [1:360] 0.743 0.743 0.743 0.743 0.743 0.743 0.743 0.743 0.743 0.743 ...
+##  $ bacterialConcX     : num [1:360] 8 8 8 8 8 8 8 8 8 8 ...
+##  $ bacterialVolume    : num [1:360] 300 300 300 300 300 300 300 300 300 300 ...
+##  $ bacterialVolUnit   : chr [1:360] &quot;ul&quot; &quot;ul&quot; &quot;ul&quot; &quot;ul&quot; ...
+##  $ incubationVial     : chr [1:360] &quot;1,5 glass vial&quot; &quot;1,5 glass vial&quot; &quot;1,5 glass vial&quot; &quot;1,5 glass vial&quot; ...
+##  $ incubationVolume   : num [1:360] 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 ...
+##  $ incubationUnit     : chr [1:360] &quot;ul&quot; &quot;ul&quot; &quot;ul&quot; &quot;ul&quot; ...
+##  $ incubationMethod   : chr [1:360] &quot;rockroll&quot; &quot;rockroll&quot; &quot;rockroll&quot; &quot;rockroll&quot; ...
+##  $ incubationRPM      : num [1:360] 35 35 35 35 35 35 35 35 35 35 ...
+##  $ bubble             : logi [1:360] NA NA NA NA NA NA ...
+##  $ incubateTemperature: num [1:360] 20 20 20 20 20 20 20 20 20 20 ...</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<pre><code>##   [1] 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00
+##  [13] 4.99e+00 4.99e+00 4.99e+00 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01
+##  [25] 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02
+##  [37] 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-03 4.99e-03 4.99e-03
+##  [49] 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03
+##  [61] 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04
+##  [73] 4.99e-04 4.99e-04 4.99e-04 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05
+##  [85] 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00
+##  [97] 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e+00 4.99e-01 4.99e-01 4.99e-01
+## [109] 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01 4.99e-01
+## [121] 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02 4.99e-02
+## [133] 4.99e-02 4.99e-02 4.99e-02 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03
+## [145] 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-03 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04
+## [157] 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-04 4.99e-05 4.99e-05 4.99e-05
+## [169] 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05 4.99e-05
+## [181] 1.95e+01 1.95e+01 1.95e+01 1.95e+01 1.95e+01 1.95e+01 1.95e+01 1.95e+01 1.95e+01 1.95e+01 1.95e+01 1.95e+01
+## [193] 1.95e+01 1.95e+01 1.95e+01 1.95e+00 1.95e+00 1.95e+00 1.95e+00 1.95e+00 1.95e+00 1.95e+00 1.95e+00 1.95e+00
+## [205] 1.95e+00 1.95e+00 1.95e+00 1.95e+00 1.95e+00 1.95e+00 1.95e-01 1.95e-01 1.95e-01 1.95e-01 1.95e-01 1.95e-01
+## [217] 1.95e-01 1.95e-01 1.95e-01 1.95e-01 1.95e-01 1.95e-01 1.95e-01 1.95e-01 1.95e-01 1.95e-02 1.95e-02 1.95e-02
+## [229] 1.95e-02 1.95e-02 1.95e-02 1.95e-02 1.95e-02 1.95e-02 1.95e-02 1.95e-02 1.95e-02 1.95e-02 1.95e-02 1.95e-02
+## [241] 1.95e-03 1.95e-03 1.95e-03 1.95e-03 1.95e-03 1.95e-03 1.95e-03 1.95e-03 1.95e-03 1.95e-03 1.95e-03 1.95e-03
+## [253] 1.95e-03 1.95e-03 1.95e-03 1.95e-04 1.95e-04 1.95e-04       NA 1.95e-04 1.95e-04 1.95e-04 1.95e-04 1.95e-04
+## [265] 1.95e-04 1.95e-04 1.95e-04 1.95e-04 1.95e-04 1.95e-04 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00
+## [277] 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00
+## [289] 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00 1.50e+00
+## [301] 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+## [313] 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+## [325] 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01
+## [337] 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01
+## [349] 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01 5.00e-01</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>A log(10) transformation will be performed on the x-axis (compound concentration). Some horizontal jitter will be applied to prevent overplotting.</p>
+<p><img src="_main_files/figure-html/visualization-1.png" width="672" /></p>
+<p>In this experiment, ethanol (/) was used as the positive control, while S-medium (/) was used as the negative control. All values are normalized based on the negative control.</p>
+<p><img src="_main_files/figure-html/visualization%202-1.png" width="672" /></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-management.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
