@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Data Management | Project Introduction</title>
-  <meta name="description" content="3 Data Management | Project Introduction" />
+  <title>3 Data management | Project Introduction</title>
+  <meta name="description" content="3 Data management | Project Introduction" />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Data Management | Project Introduction" />
+  <meta property="og:title" content="3 Data management | Project Introduction" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Data Management | Project Introduction" />
+  <meta name="twitter:title" content="3 Data management | Project Introduction" />
   
   
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Ricardo E.E. van der Raaf" />
 
 
-<meta name="date" content="2023-12-10" />
+<meta name="date" content="2023-12-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="reproducible-research-using-r.html"/>
-<link rel="next" href="minion-data-quality-control-project.html"/>
+<link rel="next" href="data-management-1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -74,8 +74,16 @@
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> This website contains my personal Data Sciences portfolio. On the first page you’ll find my CV. Test.</a></li>
 <li class="chapter" data-level="2" data-path="reproducible-research-using-r.html"><a href="reproducible-research-using-r.html"><i class="fa fa-check"></i><b>2</b> Reproducible Research using R</a></li>
-<li class="chapter" data-level="3" data-path="data-management.html"><a href="data-management.html"><i class="fa fa-check"></i><b>3</b> Data Management</a></li>
-<li class="chapter" data-level="4" data-path="minion-data-quality-control-project.html"><a href="minion-data-quality-control-project.html"><i class="fa fa-check"></i><b>4</b> Minion data quality control project</a></li>
+<li class="chapter" data-level="3" data-path="data-management.html"><a href="data-management.html"><i class="fa fa-check"></i><b>3</b> Data management</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="data-management.html"><a href="data-management.html#checking-the-datas-contents"><i class="fa fa-check"></i><b>3.1</b> Checking the data’s contents</a></li>
+<li class="chapter" data-level="3.2" data-path="data-management.html"><a href="data-management.html#storing-the-data"><i class="fa fa-check"></i><b>3.2</b> Storing the data</a></li>
+<li class="chapter" data-level="3.3" data-path="data-management.html"><a href="data-management.html#loading-the-data-into-r"><i class="fa fa-check"></i><b>3.3</b> Loading the data into R</a></li>
+<li class="chapter" data-level="3.4" data-path="data-management.html"><a href="data-management.html#data-wrangling"><i class="fa fa-check"></i><b>3.4</b> Data wrangling</a></li>
+<li class="chapter" data-level="3.5" data-path="data-management.html"><a href="data-management.html#visualisation"><i class="fa fa-check"></i><b>3.5</b> Visualisation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-management-1.html"><a href="data-management-1.html"><i class="fa fa-check"></i><b>4</b> Data Management</a></li>
+<li class="chapter" data-level="5" data-path="minion-data-quality-control-project.html"><a href="minion-data-quality-control-project.html"><i class="fa fa-check"></i><b>5</b> Minion data quality control project</a></li>
 </ul>
 
       </nav>
@@ -94,14 +102,29 @@
 
             <section class="normal" id="section-">
 <div id="data-management" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">3</span> Data Management<a href="data-management.html#data-management" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Maintaining a proper, logical method of data management while working on any data science is key to any successful project. When sharing data with colleagues, project leaders or to the main public it should be organized in such a way that it is rapidly understood what the data means, where it can be found within the directory tree and how it should be interpreted. During my time as a student, I have learned to apply the Guerilla Analytics framework as described by Enda Ridge (ISBN: 9780128002186) as a base, which was implemented into making this portfolio.</p>
-<p>#Example data tree structure</p>
-<p>#IMPORT PICTURE OF DATA STRUCTURE HERE</p>
-<p>##Backing up data</p>
-<p>One of the key principles of the Guerrilla Analytics workflow is frequently and properly making back-ups of all data that is associated with a project. Generally speaking, best practice for this is making use of online cloud storage since these services often provide data redundancy (multiple data centers spread across the globe containing copies of the same data). However, in the case of working with extremely sensitive or confidential data where there is a high risk of data theft, cloud storage might not always be an option. In those situations where local storage is preferred, a RAID 1 system can be used. This now often forgotten technology, which was widely used in the 2000’s, makes use of two storage units A and B where unit B contains an 1:1 copy of unit A. In case of a failure of one of the two hard drives, data can still be accessed through the other drive.
-<img src="Images/raid1.png" alt="img" /> ##Change to html or R code?</p>
+<h1><span class="header-section-number">3</span> Data management<a href="data-management.html#data-management" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>During one day at an hypothetical internship, an e-mail was sent to me by a colleague, asking me to analyse some data from a plate reader experiment where wells were measured over time. The data is provided in an Excel file attached to the e-mail. The colleague asks me to generate a plot per sample, no other information was provided. Listed below are the steps that I learned to apply in a situation like this.</p>
+<div id="checking-the-datas-contents" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Checking the data’s contents<a href="data-management.html#checking-the-datas-contents" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before loading any type of data into R/RStudio, it’s contents and metadata should be checked first. This include format type, checking for NA’s, what datasheet should be imported (when working with Excel files).</p>
+</div>
+<div id="storing-the-data" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Storing the data<a href="data-management.html#storing-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>After this step the data can be downloaded and stored in a raw_data folder located in the appropriate repository, preferably through code. Metadata, if provided, will be stored in a README.txt file also located in the raw_data folder. If old versions of the freshly downloaded files are present in the raw_data folder, they will need to be moved to a new subfolder V1 (or V2, V3… depending on the version number).</p>
+</div>
+<div id="loading-the-data-into-r" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Loading the data into R<a href="data-management.html#loading-the-data-into-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The now locally stored data can be loaded into R using the appropriate packages. For example, for loading Excel files the {readxl} package can be used. To increase robustness, relative pathing should be used. This can be done with the {here} package.</p>
+</div>
+<div id="data-wrangling" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Data wrangling<a href="data-management.html#data-wrangling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Whit the data now loaded in R, data wrangling can begin (if necessary). Important things to consider at this stage is which packages will be used later during the analysis and what type of data formatting this requires. For example: ggplot2 is one of the packages which I worked with a lot during my studies, which requires the data to be in the tidy format.</p>
+</div>
+<div id="visualisation" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Visualisation<a href="data-management.html#visualisation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the e-mail I was asked to create one plot per sample.This can be achieved through the ggplot package in R. A coded example of this workflow can be found in ##CROSSREFERENCE NAAR C. ELEGANS</p>
 
+</div>
 </div>
             </section>
 
@@ -109,7 +132,7 @@
         </div>
       </div>
 <a href="reproducible-research-using-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="minion-data-quality-control-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-management-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

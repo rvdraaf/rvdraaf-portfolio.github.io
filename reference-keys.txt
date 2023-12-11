@@ -1,4 +1,10 @@
 this-website-contains-my-personal-data-sciences-portfolio.-on-the-first-page-youll-find-my-cv.-test.
 reproducible-research-using-r
 data-management
+checking-the-datas-contents
+storing-the-data
+loading-the-data-into-r
+data-wrangling
+visualisation
+data-management-1
 minion-data-quality-control-project
